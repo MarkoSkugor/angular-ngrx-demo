@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { charityReducer } from './state/charity.reducer';
+import { charitySearchReducer } from './state/charity-search.reducer';
 import { HelloComponent } from './hello.component';
-import { CharityStateService } from './state/charity-state.service';
+import { CharitySearchStateService } from './state/charity-search-state.service';
 
 
 @NgModule({
   imports:      [ 
     BrowserModule, 
     FormsModule,
-    StoreModule.forRoot({ charity: charityReducer })
+    StoreModule.forRoot({ charity: charitySearchReducer })
   ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ CharityStateService ],
+  providers: [ CharitySearchStateService ],
 })
 export class AppModule { }

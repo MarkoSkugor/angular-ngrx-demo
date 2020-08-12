@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { CharitySearchState } from './charity-search-state.interface';
  
-export const selectCharitySearchState = createFeatureSelector<CharitySearchState>('charity');
+export const selectCharitySearchState = createFeatureSelector<CharitySearchState>('charity-search');
  
 export const selectCharitySearchTerm = createSelector(
   selectCharitySearchState,
