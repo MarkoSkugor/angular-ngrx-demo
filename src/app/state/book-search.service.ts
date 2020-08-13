@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CharitySearchService {
-  private USER_KEY = '2911749363c70a35e06e6467d64ec46e';
-
+export class BookSearchService {
   constructor (private http: HttpClient) { }
 
   search(searchTerm: string) {

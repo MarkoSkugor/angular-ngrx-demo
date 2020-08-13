@@ -6,10 +6,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { charitySearchReducer } from './state/charity-search.reducer';
+import { bookSearchReducer } from './state/book-search.reducer';
 import { HelloComponent } from './hello.component';
-import { CharitySearchEffects } from './state/charity-search.effects';
-import { CharitySearchStateService } from './state/charity-search-state.service';
+import { BookSearchEffects } from './state/book-search.effects';
+import { BookSearchStateService } from './state/book-search-state.service';
 
 
 @NgModule({
@@ -17,11 +17,11 @@ import { CharitySearchStateService } from './state/charity-search-state.service'
     BrowserModule, 
     FormsModule,
     HttpClientModule,
-    EffectsModule.forRoot([CharitySearchEffects]),
-    StoreModule.forRoot({ charity: charitySearchReducer })
+    EffectsModule.forRoot([BookSearchEffects]),
+    StoreModule.forRoot({ charity: bookSearchReducer })
   ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ CharitySearchStateService ],
+  providers: [ BookSearchStateService ],
 })
 export class AppModule { }

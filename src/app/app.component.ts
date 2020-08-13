@@ -1,5 +1,5 @@
 import { Component, VERSION } from '@angular/core';
-import { CharitySearchStateService } from './state/charity-search-state.service';
+import { BookSearchStateService } from './state/book-search-state.service';
 
 @Component({
   selector: 'my-app',
@@ -9,9 +9,9 @@ import { CharitySearchStateService } from './state/charity-search-state.service'
 export class AppComponent  {
   searchTerm: '';
 
-  constructor(private charitySearchStateService: CharitySearchStateService) { }
+  constructor(private bookSearchStateService: BookSearchStateService) { }
 
   search() {
-    this.charitySearchStateService.searchCharities(this.searchTerm);
+    this.bookSearchStateService.searchCharities(this.searchTerm);
   }
 }
