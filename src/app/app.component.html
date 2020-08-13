@@ -1,5 +1,6 @@
 <input [(ngModel)]="searchTerm" type="text" (keydown.enter)="search()"/>
 <button type="submit" (click)="search()">Search</button>
-<ul>
+<p *ngIf="bookSearchStateService.isLoading$ | async">Loading...</p>
+<ul *ngIf="!(bookSearchStateService.isLoading$ | async)">
   <li *ngFor="let book of (bookSearchStateService.searchResults$ | async)?.items">{{book.volumeInfo.title}}</li>
 </ul>
