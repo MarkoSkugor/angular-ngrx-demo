@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { EMPTY } from 'rxjs';
+import { of } from 'rxjs';
 import { map, mergeMap, catchError } from 'rxjs/operators';
 import { CharitySearchService } from './charity-search.service';
 
@@ -13,11 +13,11 @@ export class CharitySearchEffects {
     ofType(charitySearchActions.searchCharities),
     mergeMap(({ searchTerm }) => this.charitySearchService.search(searchTerm)
       .pipe(
-        map(searchResults => charitySearchActions.searchCharitiesSuccess({ searchResults })),
-        catchError((error) => charitySearchActions.searchCharitiesError({ error }))
+        map((searchResults: any[]) => charitySearchActions.searchCharitiesSuccess({ searchResults })),
+        catchError((searchError) => of(charitySearchActions.searchCharitiesError({ searchError })))
       ))
     )
-  );
+  ); 
  
   constructor(
     private actions$: Actions,
