@@ -13,7 +13,7 @@ export class BookSearchEffects {
     ofType(bookSearchActions.searchCharities),
     mergeMap(({ searchTerm }) => this.bookSearchService.search(searchTerm)
       .pipe(
-        map((searchResults: any[]) => bookSearchActions.searchCharitiesSuccess({ searchResults })),
+        map((searchResults) => bookSearchActions.searchCharitiesSuccess({ searchResults })),
         catchError((searchError) => of(bookSearchActions.searchCharitiesError({ searchError })))
       ))
     )

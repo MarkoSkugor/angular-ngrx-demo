@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { BookSearchState } from './book-search-state.interface';
  
-export const selectBookSearchState = createFeatureSelector<BookSearchState>('book-search');
+export const selectBookSearchState = createFeatureSelector<BookSearchState>('bookSearch');
  
 export const selectBookSearchTerm = createSelector(
   selectBookSearchState,

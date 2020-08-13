@@ -18,7 +18,7 @@ import { BookSearchStateService } from './state/book-search-state.service';
     FormsModule,
     HttpClientModule,
     EffectsModule.forRoot([BookSearchEffects]),
-    StoreModule.forRoot({ charity: bookSearchReducer })
+    StoreModule.forRoot({ bookSearch: bookSearchReducer })
   ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],

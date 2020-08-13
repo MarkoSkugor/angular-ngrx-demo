@@ -6,7 +6,7 @@ import { BookSearchState } from './book-search-state.interface';
  
 export const initialState: BookSearchState = {
   searchTerm: '',
-  searchResults: [],
+  searchResults: undefined,
   searchError: undefined,
   isLoading: false,
 };

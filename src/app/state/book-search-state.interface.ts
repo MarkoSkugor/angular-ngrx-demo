@@ -1,6 +1,6 @@
 export interface BookSearchState {
   searchTerm: string,
-  searchResults: any[],
+  searchResults: any,
   searchError: any,
   isLoading: boolean,
 } 

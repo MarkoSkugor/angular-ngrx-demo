@@ -10,7 +10,7 @@ export class BookSearchStateService {
   constructor(private store: Store<any>) {}
 
   searchTerm$: Observable<string> = this.store.select(bookSearchSelectors.selectBookSearchTerm);
-  searchResults$: Observable<any[]> = this.store.select(bookSearchSelectors.selectBookSearchResults);
+  searchResults$: Observable<any> = this.store.select(bookSearchSelectors.selectBookSearchResults);
   searchError$: Observable<any> = this.store.select(bookSearchSelectors.selectBookSearchError);
   isLoading$: Observable<boolean> = this.store.select(bookSearchSelectors.selectBookSearchIsLoading);
 

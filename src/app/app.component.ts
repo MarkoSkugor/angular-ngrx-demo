@@ -9,7 +9,7 @@ import { BookSearchStateService } from './state/book-search-state.service';
 export class AppComponent  {
   searchTerm: '';
 
-  constructor(private bookSearchStateService: BookSearchStateService) { }
+  constructor(public bookSearchStateService: BookSearchStateService) { }
 
   search() {
     this.bookSearchStateService.searchCharities(this.searchTerm);
